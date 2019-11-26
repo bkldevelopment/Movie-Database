@@ -174,9 +174,11 @@ try {
     echo "<th scope=\"col\"><strong>Year</strong></th>";
     echo "<th scope=\"col\"><strong>Genre</strong></th>";
     echo "<th scope=\"col\"><strong>Aspect</strong></th>";
+	echo "<th scope=\"col\"><strong>Like</strong></th>";
     echo "</tr>";
     echo "</thead>";
 
+	$row = 0;
 			while($row = $stmt->fetchObject()) {
 				// Get the id
 				$searched_count_id = $row->id;
@@ -188,7 +190,7 @@ try {
 				
 				// Add found movie to table
 				echo "<tbody>";
-        echo "<tr>";
+				echo "<tr>";
 				echo "<th scope=\"row\">{$row->id}</td>";
 				echo "<td>{$row->title}</td>";
 				echo "<td>{$row->studio}</td>";
@@ -200,8 +202,10 @@ try {
 				echo "<td>{$row->year}</td>";
 				echo "<td>{$row->genre}</td>";
 				echo "<td>{$row->aspect}</td>";
+				//echo '<td><input type="checkbox" value="$row" '.(0 == 123 ? 'checked="checked"':'').' /></td>';
 				echo "</tr>";
         echo "</tbody>";
+		$row++;
 			}
     echo "</table>";
     echo "</div>";
@@ -217,6 +221,6 @@ include("../templates/footer.php");
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=1login.php");
+	header("refresh:2;url=login.php");
 }
 ?>

@@ -101,6 +101,6 @@ imagedestroy($img);
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=1login.php");
+	header("refresh:2;url=login.php");
 }
 ?>

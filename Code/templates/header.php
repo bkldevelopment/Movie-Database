@@ -32,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link" href="../admin.html">Admin</a>
         </li>
+		<li class="nav-item">
+          <a class="nav-link" href="likeordislike.html">Movie Rating</a>
+        </li>
       </ul>
     </div>
   </nav> <!-- End Navbar-->

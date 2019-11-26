@@ -42,29 +42,22 @@
 <div class="container"> <!-- Start Container -->
       <div class="row text-white"> <!-- Start Row One -->
           <div class="col-12 col-sm-6 offset-sm-3 text-center">
-              <h1 class="display-4">Admin Login</h1>
+              <h1 class="display-4">Rate Movie</h1>
               <div class="info-form">
-                  <form action="./php/updatesubs.php" method="post" class="form-inlin justify-content-center">
-                    <p><strong>Remove Unsubscribers (Admin Login)</strong></p>
+                  <form action="./php/likeordislike.php" method="post" class="form-inlin justify-content-center">
+                    <p><strong>Please type in a movie id and if you like or dislike the movie.</strong></p>
                     <p>
-                      <input type="text" name="username" placeholder="Admin Username">
+                      <input type="number" name="movieID" placeholder="Movie ID">
                     </p>
-                    <p>
-                      <input type="password" name="password" placeholder="Admin Password">
+					<p>
+					   <a>Like Movie</a>
+                      <input type="radio" name="likeordislike" value="0">
                     </p>
-                    <button class="button" type="submit">Update Subscriber List</button>
-                  </form>
-                  <p></p>
-                  <form action="./php/viewsubs.php" method="post" class="form-inlin justify-content-center">
-                    <p><strong>View Members (Admin Login)</strong></p>
-                    <p>
-                      <input type="text" name="username" placeholder="Admin Username">
+					<p>
+					  <a>Dislike Movie</a>
+                      <input type="radio" name="likeordislike" value="1">
                     </p>
-                    <p>
-                      <input type="password" name="password" placeholder="Admin Password">
-                    </p>
-                    
-                    <button action="./php/viewsubs.php" class="button" type="submit">View Subscriber List</button>
+                    <button class="button" type="submit">Submit</button>
                   </form>
               </div>
           </div>
