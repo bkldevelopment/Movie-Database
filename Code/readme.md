@@ -1,1 +1,1 @@
-This will be where all the code will be stored.
+This will be where the HTML code will be stored.
