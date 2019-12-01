@@ -21,19 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="../signup.html">Sign Up</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../unsubscribe.html">Unsubscribe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../admin.html">Admin</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="../likeordislike.html">Movie Rating</a>
+            <a class="nav-link" href="./user_login.php">User Login</a>
         </li>
       </ul>
     </div>
