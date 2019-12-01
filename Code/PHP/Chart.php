@@ -6,7 +6,7 @@
 */
 //Checks wether admin account is logged into the database
 session_start();
-if(isset($_SESSION['log']))
+if(isset($_SESSION['admin']) || isset($_SESSION['user']))
 {
 // Refreshes graph every 5 seconds
 $url1=$_SERVER['REQUEST_URI'];
@@ -101,6 +101,6 @@ imagedestroy($img);
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=login.php");
+	header("refresh:2;url=user_login.php");
 }
 ?>

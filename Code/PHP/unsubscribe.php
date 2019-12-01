@@ -1,7 +1,7 @@
 <?php
 //Checks wether admin account is logged into the database
 session_start();
-if(isset($_SESSION['log']))
+if(isset($_SESSION['admin']) || isset($_SESSION['user']))
 {
 // this line includes the HTML file header.php
 include("../templates/header.php");
@@ -62,6 +62,6 @@ include("../templates/footer.php");
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=login.php");
+	header("refresh:2;url=user_login.php");
 }
 ?>

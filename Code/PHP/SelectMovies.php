@@ -6,7 +6,7 @@
 */
 //Checks wether admin account is logged into the database
 session_start();
-if(isset($_SESSION['log']))
+if(isset($_SESSION['admin']) || isset($_SESSION['user']))
 {
 // this line includes the HTML file header.php
 include("../templates/header.php");
@@ -58,7 +58,7 @@ try {
 	if(("" == $title) && ("" == $genre) && ("" == $rating) && ("" == $year)) {
 		// if all are blank
 		echo "<div class=\"row text-white\"> <!-- Start Row Two -->";
-		echo "<div class=\"col-12 col-sm-6\">";
+		echo "<div class=\"col-11 col-sm-6\">";
 		echo "<p>No data entered, unable to find any records.</p>";
 		echo "</div>";
 		echo "</div> <!-- End Row Two -->";
@@ -174,7 +174,6 @@ try {
     echo "<th scope=\"col\"><strong>Year</strong></th>";
     echo "<th scope=\"col\"><strong>Genre</strong></th>";
     echo "<th scope=\"col\"><strong>Aspect</strong></th>";
-	echo "<th scope=\"col\"><strong>Like</strong></th>";
     echo "</tr>";
     echo "</thead>";
 
@@ -221,6 +220,6 @@ include("../templates/footer.php");
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=login.php");
+	header("refresh:2;url=user_login.php");
 }
 ?>

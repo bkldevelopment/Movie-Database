@@ -6,24 +6,24 @@
 */
 //Checks wether admin account is logged into the database
 session_start();
-if(isset($_SESSION['log']))
+if(isset($_SESSION['admin']))
 {
 // this line includes the HTML file header.php
 include("../templates/header.php");
 
 // Get Variables
-$username = trim($_POST['username']);
-$password = trim($_POST['password']);
 $host = 'localhost';
 
 // Connect to Database if login information is correct
-if($username == "admin" && $password == "Bklpassword123"){
+if(isset($_SESSION['admin'])){
     try {
         require("admin_connect.php");
     } catch(PDOException $e) {
         echo "ERROR: Could not connect. " . $e->getMessage();
     }
 }
+
+
 
 // Connect to Database
 try {
@@ -54,7 +54,7 @@ include("../templates/footer.php");
 }
 else
 {
-	echo "Please login!";
-	header("refresh:2;url=login.php");
+	echo "Please login to an admin account!";
+	header("refresh:2;url=admin_login.php");
 }
 ?>

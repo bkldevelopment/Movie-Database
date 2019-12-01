@@ -6,8 +6,8 @@
 */
 $host = 'localhost';
 $db   = 'movies_db';
-$user = 'user';
-$pass = 'user';
+$user = 'root';
+$pass = '';
 $dsn = "mysql:host=$host;dbname=$db";
 
 // connect to db

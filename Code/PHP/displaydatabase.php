@@ -13,6 +13,14 @@ include("../templates/header.php");
 
 // Get Variables
 $host = 'localhost';
+$dbname = "";
+$tablename = "";
+
+if(isset($_POST['dbname']) && isset($_POST['tablename']))
+{
+	$dbname = trim($_POST['dbname']);
+	$tablename = trim($_POST['tablename']);
+}
 
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
@@ -32,7 +40,7 @@ if(isset($_SESSION['admin'])){
 }
 
 try {
-    $query = "SELECT * FROM members_table";
+    $query = "SELECT * FROM".$tablename;
     $stmt = $conn->prepare($query);
     $stmt->execute();
     
@@ -56,11 +64,11 @@ try {
         echo "<tbody>";
         echo "<tr>";
         echo "<th scope=\"row\">{$row->id}</td>";
-        echo "<td>{$row->fullname}</td>";
-        echo "<td>{$row->email}</td>";
-        echo "<td>{$row->monthly_newsletter}</td>";
-        echo "<td>{$row->breaking_newsflash}</td>";
-        echo "<td>{$row->unsubscribe}</td>";
+        echo "<td>{$row}</td>";
+        echo "<td>{$row}</td>";
+        echo "<td>{$row}</td>";
+        echo "<td>{$row}</td>";
+        echo "<td>{$row}</td>";
         echo "</tr>";
         echo "</tbody>";
     }
