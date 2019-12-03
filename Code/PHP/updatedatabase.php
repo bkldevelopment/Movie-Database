@@ -13,7 +13,7 @@ include("../templates/footer.php");
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=user_login.php");
+	header("refresh:0;url=admin_login.php");
 }
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";

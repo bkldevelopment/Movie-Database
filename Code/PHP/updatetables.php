@@ -19,7 +19,7 @@ echo "</div> <!-- End Row One -->";
 else
 {
 	echo "Please login!";
-	header("refresh:2;url=user_login.php");
+	header("refresh:0;url=admin_login.php");
 }
 ?>
 

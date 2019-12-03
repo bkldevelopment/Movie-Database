@@ -1,4 +1,9 @@
 <?php
+/*
+  Luke Gough 30003918
+  Kyper Potts 30003389
+  Brandon Price P459899
+*/
 $email=$_POST['email'];//username
 $password=$_POST['password'];//password 
 session_start();
