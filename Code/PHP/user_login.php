@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include("../templates/login_user_header.php");
@@ -12,7 +13,7 @@ include("../templates/footer.php");
               <h1 class="display-4">ACME Movie Search User Login</h1>
               <div class="info-form">
                   <form action="userconnect.php" method="post" class="form-inlin justify-content-center">
-					<p></p>
+                    <p></p>
                     <p>
                       <input type="text" name="email" placeholder="Username">
                     </p>

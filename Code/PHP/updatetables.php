@@ -18,8 +18,8 @@ echo "</div> <!-- End Row One -->";
 } 
 else
 {
-	echo "Please login!";
-	header("refresh:0;url=admin_login.php");
+    echo "Please login!";
+    header("refresh:0;url=admin_login.php");
 }
 ?>
 
@@ -31,10 +31,10 @@ else
           <div class="col-12 col-sm-6 offset-sm-3 text-center">
               <h1 class="display-4">Table Editor</h1>
               <div class="info-form">
-			  
+              
                   <form action="sqlhandler.php" method="post" class="form-inlin justify-content-center">
-					<p><strong>Add Table</strong></p>  
-					<p>
+                    <p><strong>Add Table</strong></p>  
+                    <p>
                       <input type="Database Name" name="dbname1" placeholder="Database Name">
                     </p>
                     <p>
@@ -42,10 +42,10 @@ else
                     </p>
                     <button class="button" type="submit">send</button>
                   </form>
-				  
+                  
                   <form action="sqlhandler.php" method="post" class="form-inlin justify-content-center">
-					<p><strong>Remove Table</strong></p>  
-					<p>
+                    <p><strong>Remove Table</strong></p>  
+                    <p>
                       <input type="Database Name" name="dbname2" placeholder="Database Name">
                     </p>
                     <p>
@@ -53,16 +53,16 @@ else
                     </p>
                     <button class="button" type="submit">send</button>
                   </form>
-									
-				  <form action="sqlhandler.php" method="post" class="form-inlin justify-content-center">
-					<p><strong>Insert New Column</strong></p>  
+                                    
+                  <form action="sqlhandler.php" method="post" class="form-inlin justify-content-center">
+                    <p><strong>Insert New Column</strong></p>  
                     <p>
                       <input type="Database Name" name="dbname3" placeholder="Database Name">
                     </p>
-					<p>
+                    <p>
                       <input type="Table Name" name="tablename" placeholder="Table Name">
                     </p>
-					<p>
+                    <p>
                       <input type="Column Name" name="columnname" placeholder="New Column Name">
                     </p>
                     <p>
@@ -87,7 +87,7 @@ else
                       </select>
                     </p>
                     <button class="button" type="submit">send</button>
-                  </form>							
+                  </form>                            
                   <p></p>
               </div>
           </div>
@@ -99,5 +99,3 @@ else
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-

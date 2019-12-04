@@ -12,7 +12,7 @@ include("../templates/footer.php");
               <h1 class="display-4">ACME Movie Search Login</h1>
               <div class="info-form">
                   <form action="loginconnect.php" method="post" class="form-inlin justify-content-center">
-					<p></p>
+                    <p></p>
                     <p>
                       <input type="text" name="email" placeholder="Email Address">
                     </p>

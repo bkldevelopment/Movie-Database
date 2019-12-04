@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include("../templates/login_admin_header.php");
@@ -12,7 +13,7 @@ include("../templates/footer.php");
               <h1 class="display-4">ACME Movie Search Admin Login</h1>
               <div class="info-form">
                   <form action="adminconnect.php" method="post" class="form-inlin justify-content-center">
-					<p></p>
+                    <p></p>
                     <p>
                       <input type="text" name="email" placeholder="Username">
                     </p>

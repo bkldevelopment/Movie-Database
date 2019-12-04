@@ -1,3 +1,4 @@
+
 <?php
 /*
   Luke Gough 30003918
@@ -13,14 +14,14 @@ $result=mysqli_query($con,"SELECT * FROM `admin_table` WHERE `email`='$email' &&
 $count=mysqli_num_rows($result);
 if($count==1)
 {
-	echo "Login successful!";
-	$_SESSION['admin']=1;
-	header("refresh:2;url=../");
+    echo "Login successful!";
+    $_SESSION['admin']=1;
+    header("refresh:2;url=../");
 
 }
 else
 {
-	echo "Incorrect username or password!";
-	header("refresh:2;url=admin_login.php");// it takes 2 sec to go index page
+    echo "Incorrect username or password!";
+    header("refresh:2;url=admin_login.php");// it takes 2 sec to go index page
 }
 ?>

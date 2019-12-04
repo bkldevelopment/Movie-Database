@@ -1,3 +1,4 @@
+
 <?php
 /*
   Luke Gough 30003918
@@ -16,8 +17,8 @@ echo "<a class=\"button\" href=\"../\">Back</a>";
 }
 else
 {
-	echo "Please login to an admin account!";
-	header("refresh:2;url=admin_login.php");
+    echo "Please login to an admin account!";
+    header("refresh:2;url=admin_login.php");
 }
 ?>
 
@@ -30,16 +31,16 @@ else
               <h1 class="display-4">View Database</h1>
               <div class="info-form">
                   <form action="displaydatabase.php" method="post" class="form-inlin justify-content-center">
-					<p><strong>Enter Database Name</strong></p>  
-					<p>
+                    <p><strong>Enter Database Name</strong></p>  
+                    <p>
                     <input type="Database Name" name="dbname" placeholder="Database Name">
                     </p>
-					<p><strong>Enter Table Name</strong></p>
+                    <p><strong>Enter Table Name</strong></p>
                     <p>
                     <input type="Table Name" name="tablename" placeholder="Table Name">
                     </p>
                     <button class="button" type="submit">send</button>
-                  </form>				 						
+                  </form>                                         
                   <p></p>
               </div>
           </div>

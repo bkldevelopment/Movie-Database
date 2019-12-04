@@ -27,19 +27,19 @@ if(isset($_SESSION['admin'])){
 
 // Connect to Database
 try {
-	    $query = "SELECT * FROM members_table WHERE unsubscribe = 1";
-		$stmt = $conn->prepare($query);
-		$stmt->execute();
-	if($stmt->rowCount() > 0) {
+        $query = "SELECT * FROM members_table WHERE unsubscribe = 1";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+    if($stmt->rowCount() > 0) {
         $query2 = "DELETE FROM members_table WHERE unsubscribe = 1";
-		$stmt2 = $conn->prepare($query2);
+        $stmt2 = $conn->prepare($query2);
         $stmt2->execute();
         echo "Subscriber list updated";
-	}else{
+    }else{
         echo "Subscriber list up to date";
     }
 } catch(PDOException $e) {
-	echo "ERROR: Could not run query. " . $e->getMessage();
+    echo "ERROR: Could not run query. " . $e->getMessage();
 }
 
 echo "<p></p>";
@@ -54,7 +54,7 @@ include("../templates/footer.php");
 }
 else
 {
-	echo "Please login to an admin account!";
-	header("refresh:2;url=admin_login.php");
+    echo "Please login to an admin account!";
+    header("refresh:2;url=admin_login.php");
 }
 ?>

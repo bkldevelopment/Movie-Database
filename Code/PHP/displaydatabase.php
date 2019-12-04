@@ -1,10 +1,11 @@
+
 <?php
 /*
   Luke Gough 30003918
   Kyper Potts 30003389
   Brandon Price P459899
 */
-//Checks wether admin account is logged into the database
+//Checks whether admin account is logged into the database
 session_start();
 if(isset($_SESSION['admin']))
 {
@@ -18,8 +19,8 @@ $tablename = "";
 
 if(isset($_POST['dbname']) && isset($_POST['tablename']))
 {
-	$dbname = trim($_POST['dbname']);
-	$tablename = trim($_POST['tablename']);
+    $dbname = trim($_POST['dbname']);
+    $tablename = trim($_POST['tablename']);
 }
 
 echo "<p></p>";
@@ -75,9 +76,9 @@ try {
     echo "</table>";
     echo "</div>";
     echo "</div> <!-- End Row Three -->";
-	}
+    }
 } catch(PDOException $e) {
-	echo "ERROR: Could not run query. " . $e->getMessage();
+    echo "ERROR: Could not run query. " . $e->getMessage();
 }
 
 
@@ -87,7 +88,7 @@ include("../templates/footer.php");
 }
 else
 {
-	echo "Please login to an admin account!";
-	header("refresh:2;url=admin_login.php");
+    echo "Please login to an admin account!";
+    header("refresh:2;url=admin_login.php");
 }
 ?>

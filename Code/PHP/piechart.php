@@ -1,4 +1,4 @@
- <?php 
+<?php 
 /*
   Luke Gough 30003918
   Kyper Potts 30003389
@@ -16,8 +16,8 @@ if(isset($_SESSION['admin']) || isset($_SESSION['user']))
 }
 else
 {
-	echo "Please login!";
-	header("refresh:2;url=../user_login.php");
+    echo "Please login!";
+    header("refresh:2;url=../user_login.php");
 }
  ?>  
  <!DOCTYPE html>  
@@ -32,16 +32,16 @@ else
            {  
                 var data = google.visualization.arrayToDataTable([  
                           ['Gender', 'Number'],  
-						  
+                          
                           <?php  
                           $row = mysqli_fetch_array($result) ;
                            
                           echo "['Likes', ".$row["likes"]."],";  
-					      echo "['Dislikes', ".$row["dislikes"]."],";  						  
+                          echo "['Dislikes', ".$row["dislikes"]."],";                            
                           
-														    
+                                                            
                           ?>  
-						  
+                          
                      ]);  
                 var options = {  
                       title: 'Pie Chart For A Tally Of All Liked And Disliked Movies!',  

@@ -1,3 +1,4 @@
+
 <?php
 /*
   Luke Gough 30003918
@@ -26,34 +27,34 @@ echo "<br>";
 
 // Connect to Database
 try {
-	require("connect.php");
+    require("connect.php");
 } catch(PDOException $e) {
-	echo "ERROR: Could not connect. " . $e->getMessage();
+    echo "ERROR: Could not connect. " . $e->getMessage();
 }
 
 try {
-	if(("" == $email)) {
-		// if email is empty
-		echo "<div class=\"row text-white\"> <!-- Start Row Two -->";
-		echo "<div class=\"col-12 col-sm-6\">";
-		echo "<p>No data entered, unable to find any records.</p>";
-		echo "</div>";
-		echo "</div> <!-- End Row Two -->";
+    if(("" == $email)) {
+        // if email is empty
+        echo "<div class=\"row text-white\"> <!-- Start Row Two -->";
+        echo "<div class=\"col-12 col-sm-6\">";
+        echo "<p>No data entered, unable to find any records.</p>";
+        echo "</div>";
+        echo "</div> <!-- End Row Two -->";
 
-		$query = "SELECT * FROM movies_table WHERE id = '-1'";
-		$stmt = $conn->prepare($query);
-		$stmt->execute();
-	} elseif(!($email == "")) {
-		// else if email is entered
-		$query = "SELECT * FROM members_table WHERE email = '$email'";
-		$stmt = $conn->prepare($query);
-		$stmt->execute();
+        $query = "SELECT * FROM movies_table WHERE id = '-1'";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+    } elseif(!($email == "")) {
+        // else if email is entered
+        $query = "SELECT * FROM members_table WHERE email = '$email'";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
     }
     
     $static_value = 0;
 
-	if($stmt->rowCount() > 0) {
-			while($row = $stmt->fetchObject()) {
+    if($stmt->rowCount() > 0) {
+            while($row = $stmt->fetchObject()) {
                 ?>
                     <div class="row text-white"> <!-- Start Row One -->
                         <div class="col-12 col-sm-6">
@@ -88,12 +89,12 @@ try {
                         </div>
                     </div> <!-- End Row One -->
                 <?php
-			}
+            }
     echo "</div>";
     echo "</div> <!-- End Row Three -->";
-	}
+    }
 } catch(PDOException $e) {
-	echo "ERROR: Could not run query. " . $e->getMessage();
+    echo "ERROR: Could not run query. " . $e->getMessage();
 }
 
 // this line includes the HTML file footer.php
