@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
   Luke Gough 30003918
@@ -8,13 +7,13 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project</title>
+  <title>Project</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- Start Navbar-->
-    <a class="navbar-brand" href="index.html">ACME Movie Search</a>
+    <a class="navbar-brand" href="index.html" alt="ACME Movie Search">ACME Movie Search</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,19 +21,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.html" alt="Home">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
+            <a class="nav-link" href="signup.html" alt="Sign Up">Sign Up</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="unsubscribe.html">Unsubscribe</a>
+          <a class="nav-link" href="unsubscribe.html" alt="Unsubscribe">Unsubscribe</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="admin.html">Admin</a>
+          <a class="nav-link" href="admin.html" alt="Admin">Admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="likeordislike.html">Movie Rating</a>
+          <a class="nav-link" href="likeordislike.html" alt="Movie Rating">Movie Rating</a>
         </li>
       </ul>
     </div>
@@ -43,22 +42,22 @@
 <div class="container"> <!-- Start Container -->
       <div class="row text-white"> <!-- Start Row One -->
           <div class="col-12 col-sm-6 offset-sm-3 text-center">
-              <h1 class="display-4">Rate Movie</h1>
+              <h1 class="display-4" alt="Rate Movie">Rate Movie</h1>
               <div class="info-form">
                   <form action="./php/likeordislike.php" method="post" class="form-inlin justify-content-center">
-                    <p><strong>Please type in a movie title and if you like or dislike the movie.</strong></p>
+                    <p alt="Please type in a movie title and if you like or dislike the movie."><strong>Please type in a movie title and if you like or dislike the movie.</strong></p>
                     <p>
                       <input type="Move Title" name="movietitle" placeholder="Movie Title">
                     </p>
-                    <p>
+                    <p alt="Like Movie">
                        <a>Like Movie</a>
                       <input type="radio" name="likeordislike" value="0">
                     </p>
-                    <p>
+                    <p alt="Dislike Movie">
                       <a>Dislike Movie</a>
                       <input type="radio" name="likeordislike" value="1">
                     </p>
-                    <button class="button" type="submit">Submit</button>
+                    <button class="button" type="submit" alt="Submit">Submit</button>
                   </form>
               </div>
           </div>
@@ -66,7 +65,7 @@
       <p></p>
       <div class="row text-white"> <!-- Start Row Two -->
         <div class="col-12 col-sm-6 offset-sm-3 text-center">
-          <a class="button" href="./">Back</a>
+          <a class="button" href="./" alt="Back">Back</a>
         </div>
       </div> <!-- End Row Two -->
 

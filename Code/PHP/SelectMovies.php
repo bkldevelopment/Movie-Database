@@ -24,25 +24,25 @@ $year = trim($_POST['year']);
 //echo "<div class=\"container\">";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
 echo "<div class=\"col-12 col-sm-6\">";
-echo "<h1>Searching</h1>";
+echo "<h1 alt=\"Searching\">Searching</h1>";
 if(!("" == $title)) {
-  echo "<p>Title: $title</p>";
+  echo "<p alt=\"$title\">Title: $title</p>";
 } 
 
 if(!("" == $genre)) {
-  echo "<p>Genre: $genre</p>";
+  echo "<p alt=\"$genre\">Genre: $genre</p>";
 }
 
 if(!("" == $rating)) {
-  echo "<p>Rating: $rating</p>";
+  echo "<p alt=\"$rating\">Rating: $rating</p>";
 }
 
 if(!("" == $year)) {
-  echo "<p>Year: $year</p>";
+  echo "<p alt=\"$year\">Year: $year</p>";
     $year_data = true;
 }
 
-echo "<a class=\"button\" href=\"../\">Back</a>";
+echo "<a class=\"button\" href=\"../\" alt=\"Back\">Back</a>";
 echo "</div>";
 echo "</div> <!-- End Row One -->";
 echo "<br>";
@@ -59,7 +59,7 @@ try {
         // if all are blank
         echo "<div class=\"row text-white\"> <!-- Start Row Two -->";
         echo "<div class=\"col-11 col-sm-6\">";
-        echo "<p>No data entered, unable to find any records.</p>";
+        echo "<p alt=\"No data entered, unable to find any records.\">No data entered, unable to find any records.</p>";
         echo "</div>";
         echo "</div> <!-- End Row Two -->";
 
@@ -163,17 +163,17 @@ try {
     echo "<table class=\"table text-white\">";
     echo "<thead>";
     echo "<tr>";
-    echo "<th scope=\"col\"><strong>ID</strong></th>";
-    echo "<th scope=\"col\"><strong>Title</strong></th>";
-    echo "<th scope=\"col\"><strong>Studio</strong></th>";
-    echo "<th scope=\"col\"><strong>Status</strong></th>";
-    echo "<th scope=\"col\"><strong>Sound</strong></th>";
-    echo "<th scope=\"col\"><strong>Versions</strong></th>";
-    echo "<th scope=\"col\"><strong>RecRetPrice</strong></th>";
-    echo "<th scope=\"col\"><strong>Rating</strong></th>";
-    echo "<th scope=\"col\"><strong>Year</strong></th>";
-    echo "<th scope=\"col\"><strong>Genre</strong></th>";
-    echo "<th scope=\"col\"><strong>Aspect</strong></th>";
+    echo "<th scope=\"col\" alt=\"ID\"><strong>ID</strong></th>";
+    echo "<th scope=\"col\" alt=\"Title\"><strong>Title</strong></th>";
+    echo "<th scope=\"col\" alt=\"Studio\"><strong>Studio</strong></th>";
+    echo "<th scope=\"col\" alt=\"Status\"><strong>Status</strong></th>";
+    echo "<th scope=\"col\" alt=\"Sound\"><strong>Sound</strong></th>";
+    echo "<th scope=\"col\" alt=\"Versions\"><strong>Versions</strong></th>";
+    echo "<th scope=\"col\" alt=\"RecRetPrice\"><strong>RecRetPrice</strong></th>";
+    echo "<th scope=\"col\" alt=\"Rating\"><strong>Rating</strong></th>";
+    echo "<th scope=\"col\" alt=\"Year\"><strong>Year</strong></th>";
+    echo "<th scope=\"col\" alt=\"Genre\"><strong>Genre</strong></th>";
+    echo "<th scope=\"col\" alt=\"Aspect\"><strong>Aspect</strong></th>";
     echo "</tr>";
     echo "</thead>";
 
@@ -190,18 +190,17 @@ try {
                 // Add found movie to table
                 echo "<tbody>";
                 echo "<tr>";
-                echo "<th scope=\"row\">{$row->id}</td>";
-                echo "<td>{$row->title}</td>";
-                echo "<td>{$row->studio}</td>";
-                echo "<td>{$row->status}</td>";
-                echo "<td>{$row->sound}</td>";
-                echo "<td>{$row->versions}</td>";
-                echo "<td>{$row->recretprice}</td>";
-                echo "<td>{$row->rating}</td>";
-                echo "<td>{$row->year}</td>";
-                echo "<td>{$row->genre}</td>";
-                echo "<td>{$row->aspect}</td>";
-                //echo '<td><input type="checkbox" value="$row" '.(0 == 123 ? 'checked="checked"':'').' /></td>';
+                echo "<td alt=\"$row->id\">{$row->id}</td>";
+                echo "<td alt=\"$row->title\">{$row->title}</td>";
+                echo "<td alt=\"$row->studio\">{$row->studio}</td>";
+                echo "<td alt=\"$row->status\">{$row->status}</td>";
+                echo "<td alt=\"$row->sound\">{$row->sound}</td>";
+                echo "<td alt=\"$row->versions\">{$row->versions}</td>";
+                echo "<td alt=\"$row->recretprice\">{$row->recretprice}</td>";
+                echo "<td alt=\"$row->rating\">{$row->rating}</td>";
+                echo "<td alt=\"$row->year\">{$row->year}</td>";
+                echo "<td alt=\"$row->genre\">{$row->genre}</td>";
+                echo "<td alt=\"$row->aspect\">{$row->aspect}</td>";
                 echo "</tr>";
         echo "</tbody>";
         $row++;

@@ -17,7 +17,7 @@ $host = 'localhost';
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
 echo "<div class=\"col-12 col-sm-6\">";
-echo "<a class=\"button\" href=\"../\">Back</a>";
+echo "<a class=\"button\" href=\"../admin.html\">Back</a>";
 echo "</div>";
 echo "</div> <!-- End Row One -->";
 echo "<p></p>";

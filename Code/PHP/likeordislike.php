@@ -100,12 +100,11 @@ else
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
 echo "<div class=\"col-12 col-sm-6\">";
-//echo "<a class=\"button\" href=\"piechart.php/\">Pie Chart</a>";
 echo "</div>";
 echo "</div> <!-- End Row One -->";
 echo "<p></p>";
 echo "<a class=\"button\" href=\"../\">Back</a>";
-include("../templates/footer.php"); 
+
 }
 else
 {
@@ -114,44 +113,37 @@ else
 }
 
 ?>
-<!DOCTYPE html>  
- <html>  
-      <head>  
-           <title><?php echo $url; ?></title>  
-           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
-           <script type="text/javascript">  
-           google.charts.load('current', {'packages':['corechart']});  
-           google.charts.setOnLoadCallback(drawChart);  
-           function drawChart()  
-           {  
+<p></p>
+<div class="row text-white"> <!-- Start Row Two -->
+    <div class="col-12 col-sm-6">
+    <div style="width:900px;">  
+        <div id="piechart" style="width: 900px; height: 500px;"></div>  
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
+        <script type="text/javascript">  
+            google.charts.load('current', {'packages':['corechart']});  
+            google.charts.setOnLoadCallback(drawChart);  
+            function drawChart()  
+            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['Gender', 'Number'],  
-                          
-                          <?php  
-                          $row = mysqli_fetch_array($result) ;
-                           
-                          echo "['Likes', ".$row["likes"]."],";  
-                          echo "['Dislikes', ".$row["dislikes"]."],";                            
-                          
-                                                            
-                          ?>  
-                          
-                     ]);  
+                            ['Gender', 'Number'],  
+                            <?php  
+                            $row = mysqli_fetch_array($result) ;
+                            echo "['Likes', ".$row["likes"]."],";  
+                            echo "['Dislikes', ".$row["dislikes"]."],";                                                          
+                            ?>  
+                        ]);  
                 var options = {  
-                      title: "Pie Chart of the movie you have like/disliked!",  
-                      //is3D:true,  
-                      pieHole: 0.4  
-                     };  
+                        title: "Pie Chart of the movie you have like/disliked!",  
+                        //is3D:true,  
+                        pieHole: 0.4  
+                        };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
                 chart.draw(data, options);  
-           }  
-           </script>  
-      </head>  
-      <body>  
-           <br /><br />  
-           <div style="width:900px;">  
-                <br />  
-                <div id="piechart" style="width: 900px; height: 500px;"></div>  
-           </div>  
-      </body>  
- </html> 
+            }  
+        </script>  
+    </div>
+</div> <!-- End Row One -->
+
+<?php
+ include("../templates/footer.php"); 
+?>

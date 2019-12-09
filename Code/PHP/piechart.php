@@ -57,7 +57,7 @@ else
            <br /><br />  
            <div style="width:900px;">  
                 <br />  
-                <div id="piechart" style="width: 900px; height: 500px;"></div>  
+                <div id="piechart" style="width: 900px; height: 500px;" alt="pie chart"></div>  
            </div>  
       </body>  
  </html> 

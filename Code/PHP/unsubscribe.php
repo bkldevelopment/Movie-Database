@@ -31,9 +31,9 @@ if (!($email_err)) {
             $query_two = "UPDATE members_table SET unsubscribe = 1 WHERE email = '$email'";
             $stmt_two = $conn->prepare($query_two);
             $stmt_two->execute();
-            echo "You have been unsubscribed";
+            echo "<p alt=\"You have been unsubscribed\">You have been unsubscribed</p>";
         } else {
-            echo "That email address does not exists.";
+            echo "<p alt=\"That email address does not exist.\">That email address does not exist.</p>";
         }
 
     } catch (PDOException $e) {
@@ -45,14 +45,14 @@ if (!($email_err)) {
 
 } else {
     if ($email_err) {
-        print_r("Incorrect Email format.");
+        echo "<p alt=\"Incorrect Email format.\">Incorrect Email format.</p>";
     }
 }
 
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
 echo "<div class=\"col-12 col-sm-6\">";
-echo "<a class=\"button\" href=\"../\">Back</a>";
+echo "<a class=\"button\" href=\"../\" alt=\"Back\">Back</a>";
 echo "</div>";
 echo "</div> <!-- End Row One -->";
 

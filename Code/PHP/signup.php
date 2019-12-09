@@ -42,14 +42,14 @@ if (!($email_err)) {
         $stmt->execute();
         
         if($stmt->rowCount() > 0){
-            echo "That email is already in use.";
+            echo "<p alt=\"That email is already in use.\">That email is already in use.</p>";
         } else {
             // Add member to database
             $query_two = "INSERT INTO members_table (email, fullname, monthly_newsletter, breaking_newsflash) VALUES ('$email', '$fullname', '$monthly_newsletter', '$breaking_newsflash')";
             //$conn->exec($query);
             $stmt_two = $conn->prepare($query_two);
             $stmt_two->execute();
-            echo "Email has been subscribed.";
+            echo "<p alt=\"Email has been subscribed\">Email has been subscribed.</p>";
         }
     } catch (PDOException $e) {
         echo "ERROR: Could not run query. " . $e->getMessage();
@@ -60,16 +60,16 @@ if (!($email_err)) {
     
 } else {
     if ($email_err) {
-        print_r("Incorrect Email format.");
+        echo "<p alt=\"Incorrect Email format.\">Incorrect Email format.</p>";
     } elseif ($firstname_err) {
-        print_r("Incorrect Firstname format.");
+        echo "<p alt=\"Incorrect Firstname format.\">Incorrect Firstname format.</p>";
     }
 }
 
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
 echo "<div class=\"col-12 col-sm-6\">";
-echo "<a class=\"button\" href=\"../\">Back</a>";
+echo "<a class=\"button\" href=\"../\" alt=\"Back\">Back</a>";
 echo "</div>";
 echo "</div> <!-- End Row One -->";
 

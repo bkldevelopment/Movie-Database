@@ -9,7 +9,6 @@ session_start();
 if(isset($_SESSION['admin']))
 {
 include("../templates/header.php");
-include("../templates/footer.php"); 
 //database
 $dbadd = "";
 $dbremove = "";
@@ -142,5 +141,5 @@ else
 }
 
 
-
+include("../templates/footer.php"); 
 ?>

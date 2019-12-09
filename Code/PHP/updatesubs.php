@@ -23,8 +23,6 @@ if(isset($_SESSION['admin'])){
     }
 }
 
-
-
 // Connect to Database
 try {
         $query = "SELECT * FROM members_table WHERE unsubscribe = 1";
@@ -34,9 +32,9 @@ try {
         $query2 = "DELETE FROM members_table WHERE unsubscribe = 1";
         $stmt2 = $conn->prepare($query2);
         $stmt2->execute();
-        echo "Subscriber list updated";
+        echo "<p alt=\"Subscriber list updated.\">Subscriber list updated.</p>";
     }else{
-        echo "Subscriber list up to date";
+        echo "<p alt=\"Subscriber list up to date.\">Subscriber list up to date.</p>";
     }
 } catch(PDOException $e) {
     echo "ERROR: Could not run query. " . $e->getMessage();
@@ -45,7 +43,7 @@ try {
 echo "<p></p>";
 echo "<div class=\"row text-white\"> <!-- Start Row One -->";
 echo "<div class=\"col-12 col-sm-6\">";
-echo "<a class=\"button\" href=\"../\">Back</a>";
+echo "<a class=\"button\" href=\"../admin.html\" alt=\"Back\">Back</a>";
 echo "</div>";
 echo "</div> <!-- End Row One -->";
 

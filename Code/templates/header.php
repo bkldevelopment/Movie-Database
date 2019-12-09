@@ -13,7 +13,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- Start Navbar-->
-    <a class="navbar-brand" href="index.html">ACME Movie Search</a>
+    <a class="navbar-brand" href="index.html" alt="ACME Movie Search">ACME Movie Search</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,19 +21,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../index.html" alt="Home">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../signup.html">Sign Up</a>
+            <a class="nav-link" href="../signup.html" alt="Sign Up">Sign Up</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="../unsubscribe.html">Unsubscribe</a>
+          <a class="nav-link" href="../unsubscribe.html" alt="Unsubscribe">Unsubscribe</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../admin.html">Admin</a>
+          <a class="nav-link" href="../admin.html" alt="Admin">Admin</a>
         </li>
 		<li class="nav-item">
-          <a class="nav-link" href="../likeordislike.html">Movie Rating</a>
+          <a class="nav-link" href="../likeordislike.html" alt="Movie Rating">Movie Rating</a>
         </li>
       </ul>
     </div>
