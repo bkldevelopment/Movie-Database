@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2019 at 05:37 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Dec 10, 2019 at 02:08 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,7 +39,8 @@ CREATE TABLE `admin_table` (
 --
 
 INSERT INTO `admin_table` (`id`, `email`, `password`) VALUES
-(1, 'admin@admin.admin', 'admin');
+(1, 'admin@admin.admin', 'admin'),
+(2, 'admin@bkldevelopment.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -61,13 +62,9 @@ CREATE TABLE `members_table` (
 --
 
 INSERT INTO `members_table` (`id`, `fullname`, `email`, `monthly_newsletter`, `breaking_newsflash`, `unsubscribe`) VALUES
-(6, 'asdjaksjf', 'asd@asdkjasd.com', 1, 1, 0),
-(7, 'fkdjalksd', 'kdjfkjasd@jksabfkjasd.com', 1, 1, 0),
-(8, 'a', 'a@a.com', 1, 0, 0),
-(9, 'asjlkndalsd', 'aslkjdlK@asjkda.com', 0, 0, 0),
-(10, 'asdasf', 'sadasd@asda.com', 1, 1, 0),
-(12, 'bob poe', 'keepoit@gmail.com', 1, 1, 0),
-(13, 'ttrrtrt', 'Brandon@gmail.com', 1, 1, 0);
+(15, 'John', 'john.smith@bkldevelopment.com', 1, 0, 0),
+(16, 'Jane Doe', 'jane.doe@bkldevelopment.com', 0, 1, 0),
+(18, 'Theodore Roosevelt', 'teddy.roos@bkldevelopment.com', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -95,7 +92,7 @@ CREATE TABLE `movies_table` (
 --
 
 INSERT INTO `movies_table` (`id`, `title`, `studio`, `status`, `sound`, `versions`, `recretprice`, `rating`, `year`, `genre`, `aspect`, `searchedcount`) VALUES
-(1, '10', 'Warner Brothers', 'Out', '1.0', '4:3, LBX, 16:9', '19.98', 'R', '1979', 'Comedy', '2.35:1', 76),
+(1, '10', 'Warner Brothers', 'Out', '1.0', '4:3, LBX, 16:9', '19.98', 'R', '1979', 'Comedy', '2.35:1', 77),
 (2, '12 Monkeys (DTS)', 'Universal', 'Out', 'DTS', 'LBX, 16:9', '34.98', 'R', '1995', 'SciFi', '1.85:1', 5),
 (3, '12 Monkeys: Collector\'s Edition', 'Universal', 'Cancelled', '5.1', 'LBX, 16:9', '29.98', 'R', '1995', 'Drama', '1.85:1', 0),
 (4, '187: Special Edition', 'Warner Brothers', 'Out', '5.1', 'LBX, 16:9', '24.98', 'R', '1997', 'Mystery/Suspense', '1.85:1', 0),
@@ -2419,8 +2416,7 @@ CREATE TABLE `streaming_table` (
 INSERT INTO `streaming_table` (`id`, `movie_title`, `movie_like`, `movie_dislike`) VALUES
 (5, 'Sunshine', 11, 7),
 (6, 'Circuit 6', 2, 0),
-(7, '10', 4, 3),
-(8, '', 3, 0),
+(7, '10', 5, 3),
 (9, 'Best In Show', 0, 1);
 
 -- --------------------------------------------------------
@@ -2441,7 +2437,8 @@ CREATE TABLE `user_table` (
 
 INSERT INTO `user_table` (`id`, `email`, `password`) VALUES
 (4, 'user@user.user', 'user'),
-(5, 'bkldevelopment@user.user', 'user123');
+(6, 'john.smith@bkldevelopment.com', 'password123'),
+(7, 'jane.doe@bkldevelopment.com', 'janedoe');
 
 --
 -- Indexes for dumped tables
@@ -2485,13 +2482,13 @@ ALTER TABLE `user_table`
 -- AUTO_INCREMENT for table `admin_table`
 --
 ALTER TABLE `admin_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `members_table`
 --
 ALTER TABLE `members_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `movies_table`
@@ -2509,7 +2506,7 @@ ALTER TABLE `streaming_table`
 -- AUTO_INCREMENT for table `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
