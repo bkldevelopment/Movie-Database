@@ -24,7 +24,7 @@
             <a class="nav-link" href="../index.html" alt="Home">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../signup.html" alt="Sign Up">Sign Up</a>
+        <a class="nav-link" href="subscribe.html" alt="Subscribe">Subscribe</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" href="../unsubscribe.html" alt="Unsubscribe">Unsubscribe</a>
@@ -32,7 +32,7 @@
         <li class="nav-item">
           <a class="nav-link" href="../admin.html" alt="Admin">Admin</a>
         </li>
-		<li class="nav-item">
+		    <li class="nav-item">
           <a class="nav-link" href="../likeordislike.html" alt="Movie Rating">Movie Rating</a>
         </li>
       </ul>
